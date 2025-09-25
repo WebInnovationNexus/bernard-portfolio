@@ -18,13 +18,15 @@ const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-transparent via-primary-lighter to-transparent"></div>
       </div>
 
-      <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center relative z-10">
+      {/* Container */}
+      <div className="container mx-auto px-6 flex flex-col lg:grid lg:grid-cols-2 gap-12 items-center relative z-10 text-center lg:text-left">
+        
         {/* Left Content */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-center lg:text-left"
+          className="flex flex-col items-center lg:items-start"
         >
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
@@ -50,7 +52,7 @@ const Hero = () => {
               Faculty of Education - NWU
             </p>
             
-            <div className="typewriter text-lg md:text-xl text-white font-medium">
+            <div className="typewriter text-lg md:text-xl text-white font-medium max-w-md mx-auto lg:mx-0">
               "Let's work together to make your voice heard through voting."
             </div>
           </motion.div>
@@ -76,7 +78,7 @@ const Hero = () => {
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.4, duration: 0.8 }}
-          className="flex justify-center lg:justify-end"
+          className="flex justify-center lg:justify-end mt-10 lg:mt-0"
         >
           <div className="relative">
             <motion.img

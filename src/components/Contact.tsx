@@ -132,7 +132,7 @@ const Contact = () => {
                     <div className="text-sm text-muted-foreground">Students Reached</div>
                   </div>
                   <div className="p-4">
-                    <div className="text-2xl font-bold text-primary">0</div>
+                    <div className="text-2xl font-bold text-primary">2</div>
                     <div className="text-sm text-muted-foreground">Days to Vote</div>
                   </div>
                   <div className="p-4">
