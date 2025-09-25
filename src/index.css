@@ -1,0 +1,201 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 210 15% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 15% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 15% 15%;
+
+    --primary: 214 95% 65%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 214 95% 75%;
+    --primary-lighter: 214 95% 85%;
+
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 210 15% 15%;
+
+    --muted: 214 30% 97%;
+    --muted-foreground: 210 15% 45%;
+
+    --accent: 214 95% 65%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214 30% 90%;
+    --input: 214 30% 95%;
+    --ring: 214 95% 65%;
+
+    /* Campaign specific colors */
+    --campaign-blue: 214 95% 65%;
+    --campaign-blue-light: 214 95% 75%;
+    --campaign-blue-lighter: 214 95% 85%;
+    --campaign-white: 0 0% 100%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--campaign-blue)), hsl(var(--campaign-blue-light)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--campaign-blue)) 0%, hsl(var(--campaign-blue-light)) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(var(--campaign-white)) 0%, hsl(var(--campaign-blue-lighter)) 100%);
+    
+    /* Shadows */
+    --shadow-soft: 0 4px 20px -4px hsl(var(--campaign-blue) / 0.15);
+    --shadow-button: 0 2px 10px -2px hsl(var(--campaign-blue) / 0.3);
+    --shadow-card: 0 8px 30px -8px hsl(var(--campaign-blue) / 0.2);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 210 20% 8%;
+    --foreground: 0 0% 95%;
+
+    --card: 210 20% 10%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 210 20% 10%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 214 95% 65%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 214 95% 75%;
+    --primary-lighter: 214 95% 85%;
+
+    --secondary: 210 20% 15%;
+    --secondary-foreground: 0 0% 95%;
+
+    --muted: 210 20% 15%;
+    --muted-foreground: 210 15% 65%;
+
+    --accent: 214 95% 65%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 210 20% 20%;
+    --input: 210 20% 15%;
+    --ring: 214 95% 65%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Custom animations */
+@keyframes typewriter {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.typewriter {
+  overflow: hidden;
+  border-right: 3px solid hsl(var(--primary));
+  white-space: nowrap;
+  animation: typewriter 3s steps(60) infinite, blink 1s infinite;
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 0.6s ease-out;
+}
+
+/* Custom component styles */
+.hero-gradient {
+  background: var(--gradient-hero);
+}
+
+.card-gradient {
+  background: var(--gradient-card);
+}
+
+.shadow-campaign {
+  box-shadow: var(--shadow-card);
+}
+
+.transition-campaign {
+  transition: var(--transition-smooth);
+}
+
+.bounce-campaign {
+  transition: var(--transition-bounce);
+}
