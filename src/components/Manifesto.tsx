@@ -154,7 +154,7 @@ const Manifesto = () => {
             <CardContent className="p-8">
               <h3 className="text-2xl font-bold mb-4">Ready to Make a Change?</h3>
               <p className="text-lg mb-6 text-primary-foreground/90">
-                Vote for Bernard Makgopa on September 29th-30th, 2025
+                Vote for Bernard Makgopa on 29 - 30 September 2025, on eFundi, Education Chapter 2025, then Polls.
               </p>
               <Button 
                 size="lg"

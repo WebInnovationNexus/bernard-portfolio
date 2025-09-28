@@ -12,7 +12,7 @@ const Experience = () => {
       period: '2021',
       description: 'Led marketing initiatives and managed social media presence for school events and activities.',
       achievements: [
-        'Increased social media engagement by 200%',
+        'Increased social media engagement by 120%',
         'Successfully promoted major school events',
         'Created promotional materials and campaigns',
         'Managed team of student marketers'
