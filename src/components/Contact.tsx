@@ -62,7 +62,7 @@ const Contact = () => {
             <Card className="hero-gradient text-primary-foreground shadow-campaign">
               <CardHeader className="text-center">
                 <CardTitle className="text-3xl font-bold mb-4">
-                  Vote Bernard Makgopa
+                  <b>Vote Bernard Makgopa</b>
                 </CardTitle>
                 <p className="text-xl text-primary-foreground/90">
                   Marketing & Recruitment - Faculty of Education
@@ -128,11 +128,11 @@ const Contact = () => {
                 </p>
                 <div className="grid md:grid-cols-3 gap-4 text-center">
                   <div className="p-4">
-                    <div className="text-2xl font-bold text-primary">217+</div>
+                    <div className="text-2xl font-bold text-primary">221+</div>
                     <div className="text-sm text-muted-foreground">Students Reached</div>
                   </div>
                   <div className="p-4">
-                    <div className="text-2xl font-bold text-primary">1</div>
+                    <div className="text-2xl font-bold text-primary">0</div>
                     <div className="text-sm text-muted-foreground">Day to Vote</div>
                   </div>
                   <div className="p-4">
