@@ -53,7 +53,7 @@ const Hero = () => {
             </p>
             
             <div className="typewriter text-lg md:text-xl text-white font-medium max-w-md mx-auto lg:mx-0">
-              "Let's work together to make your voice heard through voting."
+              "Let's work together to make your voice heard through voting. Vote now! 29 September - 30 September! Go to eFundi, Education Chapter 2025, Tools, then Polls, and finally cast your vote to BERNARD MAKAGOPA"
             </div>
           </motion.div>
 
