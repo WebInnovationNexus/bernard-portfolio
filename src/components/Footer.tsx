@@ -21,7 +21,7 @@ const Footer = () => {
               <p className="text-sm">
                 Designed by{' '}
                 <a
-                  href="https://www.webinnovationnexus.com"
+                  href="https://webinnovationnexus.com/"
                   className="font-semibold text-primary-light"
                   target="_blank"
                   rel="noopener noreferrer"
